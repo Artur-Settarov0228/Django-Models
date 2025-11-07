@@ -8,9 +8,8 @@ class Tasks(models.Model):
 
     name = models.CharField(max_length=128)
     description = models.TextField()
-    gender_type = models.CharField(choices=gender.items(), null = False)
+    gender_type = models.CharField(choices=gender.items(), default='2')
     
     def __str__(self):
         return f" {id} - {self.name}"
-
 
